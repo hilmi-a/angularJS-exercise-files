@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>HELLO!!!</title>
+	<script src="js/angular.js"></script>
+</head>
+<body>
+	<!-- ng-model & ng-bind -->
+	<input type="text" ng-model="name" ><!--ng-model is for tag that takes input-->
+	<div>Hello {{name}} </div>
+	<div ng-bind="name"></div>
+
+	<!-- div-init -->
+	<br>
+	<div ng-init="language='AngularJS'"></div>
+	<div>{{ language }}</div>
+	<div>{{'language'}}</div>
+	Favorite Language : <input type="text" ng-model="language"> Answer : {{language}}
+</body>
+</html>

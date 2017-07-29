@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLangApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS || Controller!!!</title>
+	<script src="js/angular.js"></script>
+</head>
+<body>
+	<div ng-controller="language">
+		Select your favourite language : 
+		<button ng-click="php()">PHP</button>
+		<button ng-click="javascript()">Javascript</button>
+		<button ng-click="c()">C</button>
+		<p>You have selected : {{myFavLang}}</p>
+	</div>
+	<script type="text/javascript">
+		var application = angular.module('myLangApp', []);//myLangApp = ng-app name, [] = dependencies for the application
+		application.controller('language',  function($scope){//function scope to get access to View of the MVC model
+			$scope.myFavLang = "None";
+
+			$scope.php = function(){
+				$scope.myFavLang = 'PHP';
+			}
+			$scope.javascript = function(){
+				$scope.myFavLang = 'javascript';
+			}
+			$scope.c = function(){
+				$scope.myFavLang = 'C';
+			}
+
+		});
+	</script>
+</body>
+</html>
